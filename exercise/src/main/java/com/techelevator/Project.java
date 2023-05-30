@@ -48,7 +48,8 @@ public class Project {
 
     String startDate;
     String dueDate;
-    static ArrayList<Employee>teamMembers = new ArrayList<>();
+    private ArrayList<Employee>teamMembers = new ArrayList<>();
+
 
 
 

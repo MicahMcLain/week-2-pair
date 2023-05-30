@@ -136,6 +136,7 @@ public class Application {
         MLP.setDueDate("10/17/2020");
         ArrayList<Employee> marketEmp = new ArrayList<>();
         for (Employee e : employees) {
+
             if (e.getDepartment().getDepartmentId() == 0) {
                 marketEmp.add(e);
             }
@@ -149,11 +150,13 @@ public class Application {
      */
     private void printProjectsReport() {
         System.out.println("\n------------- PROJECTS ------------------------------");
-        for (String p : projects.keySet()){
-            int deptSize = Project.teamMembers.size();
-            System.out.println(p+ " " + deptSize);
+        for (String projectKey : projects.keySet()) {
 
+            final Project project = projects.get(projectKey);
+
+            int deptSize = project.getTeamMembers().size();
+
+            System.out.println(projectKey + " " + deptSize);
         }
     }
-
 }

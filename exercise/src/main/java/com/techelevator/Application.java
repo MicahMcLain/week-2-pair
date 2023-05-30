@@ -66,8 +66,8 @@ public class Application {
      */
     private void printDepartments() {
         System.out.println("------------- DEPARTMENTS ------------------------------");
-        for (int i = 0; i < departments.size(); i++) {
-            System.out.println(departments.get(i).getName());
+        for (Department department : departments) {
+            System.out.println(department.getName());
         }
     }
 
